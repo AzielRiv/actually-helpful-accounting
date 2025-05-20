@@ -1,0 +1,10 @@
+<div *ngIf="(loading$ | async) === false; else loadingTemplate">
+  <setup-view [Show]="ShowHeaderFooter" [ShowBackground]="false"></setup-view>
+  <div id="app-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<ng-template #loadingTemplate>
+  <div>Loading...</div>
+</ng-template>

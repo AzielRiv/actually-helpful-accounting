@@ -1,0 +1,83 @@
+/* CSS */
+.footer {
+  position: relative;
+   background: var(--Color);
+  color: white;
+  padding: 60px 20px 160px;
+  overflow: hidden;
+  clip-path: polygon(50% 0%, -90% 100%, 260% 100%);
+  z-index: 0;
+}
+
+.footer-triangle {
+    position: relative;
+    top: 170px;
+    left: 0;
+    width: 100%;
+    height: 170px;
+    background: var(--Color2);
+    clip-path: polygon(0% 30%, 50% 0%, 0% 200%);
+  
+}
+
+.footer-content {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+  color: white;
+  z-index: 2;
+
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+
+
+
+// .footer {
+//   position: relative;
+//   background: var(--Color);
+//   color: white;
+//   padding: 60px 20px 160px;
+//   overflow: hidden;
+//   /* Remove or adjust z-index */
+//   /* z-index: -2; */
+// }
+
+// .footer-triangle {
+//   position: absolute; /* Use absolute so it sits behind content */
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100px;
+//   background: var(--Color2);
+//   clip-path: polygon(0% 30%, 50% 0%, 0% 100%);
+//   z-index: 0;
+// }
+
+// .footer-content {
+//   position: relative;
+//   z-index: 1; /* Ensure content is above triangle */
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-start;
+//   max-width: 100%;
+//   margin: auto;
+//   flex-wrap: wrap;
+// }

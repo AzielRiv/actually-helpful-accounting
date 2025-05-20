@@ -1,0 +1,144 @@
+.styled-image{
+    background-image: url(/assets/images/teamwork.webp);
+    background-position: center 25%;
+    box-shadow: inset 0px -3px 4px 0px #ffffff;
+    height: 750px;
+    margin: 0.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(50% 0%, 175% 50%, 50% 100%, -75% 50%);
+    z-index: -1;
+}
+
+@media (max-width: 1400px) {
+	.styled-image {
+        max-height: 600px;
+	}
+  }
+  @media (max-width: 500px) {
+	.styled-image {
+        max-height: 700px;
+	}
+  }
+
+    @media (max-width: 400px) {
+	.styled-image {
+        max-height: 800px;
+	}
+  }
+
+   @media (max-width: 350px) {
+	.styled-image {
+        height: 1500px;
+	}
+  }
+
+
+  .styled-image-overlay{
+	background: linear-gradient(20deg, rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.836));
+	 padding-top: 150px;
+    height:1000px;
+    color:#ffffff;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+
+  &h3 { 
+
+    text-align: center;
+    margin-top: 6em;
+  }
+  & p {
+    text-align: center;
+ 
+  }
+	& button{
+		margin-bottom: 6em;
+		margin-left: 2em;
+	}
+}
+
+@media (max-width: 1400px) {
+    .styled-image-overlay {
+            padding-top: 100px;
+            padding-left: 24%;
+            padding-right: 24%;
+    }
+    }
+@media (max-width: 953px) {
+    .styled-image-overlay {
+            padding-top: 40px;
+            padding-left: 24px;
+            padding-right: 24px;
+    }
+    }
+@media (max-width: 837px) {
+    .styled-image-overlay {
+              padding-top: 50px;
+            padding-left: 24px;
+            padding-right: 24px;
+      }
+      }
+@media (max-width: 750px) {
+    .styled-image-overlay {
+           padding-top: 65px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        }
+@media (max-width: 650px) {
+  .styled-image-overlay {
+            padding-top: 80px;
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+          }
+
+@media (max-width: 465px) {
+	.styled-image-overlay {
+ padding-top: 60px;
+            padding-left: 24px;
+            padding-right: 24px;
+	}
+  }
+@media (max-width: 442px) {
+	.styled-image-overlay {
+ padding-top: 100px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 60px;
+	}
+  }
+ 
+ 
+
+@media (max-width: 400px) {
+    .styled-image-overlay {
+        padding-top: 100px;
+            padding-left: 24px;
+            padding-right: 24px;
+    }
+    }
+    @media (max-width: 387px) {
+      .styled-image-overlay {
+        padding-top: 100px;
+            padding-left: 24px;
+            padding-right: 24px;
+      }
+      }
+@media (max-width: 346px) {
+    .styled-image-overlay {
+                 padding-top: 100px;
+            padding-left: 24px;
+            padding-right: 24px;
+   
+    }
+    }
+@media (max-width: 330px) {
+    .styled-image-overlay {
+                 padding-top: 80px;
+            padding-left: 24px;
+            padding-right: 24px;
+   
+    }
+    }

@@ -1,0 +1,126 @@
+.imgLogo{
+	height: 100%;
+}
+
+  // Responsive navigation styles
+  ion-tab-bar {
+	@media (max-width: 768px) {
+	  display: none;
+	}
+  }
+  
+  ion-header {
+	@media (min-width: 769px) {
+	  display: none;
+	}
+  }
+
+  .hover:hover {
+	--background: var(--Color4);
+  --color: black;
+
+ 
+  }
+  
+
+  ion-tab-button {
+    --background: transparent;
+    --background-hover: #4d3328;
+    --background-activated: #271812;
+    --background-focused: #271812;
+  
+    --border-radius: 0;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 0px;
+  
+    --box-shadow:
+  
+      5px 5px 0 var(--Color3),
+      10px 10px 0 var(--Color2),
+      15px 15px 0 var(--Color);
+  
+  
+    --ripple-color: deeppink;
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  
+    &:hover {
+      --box-shadow:
+        0px 5px 0 var(--Color3),
+        0px 10px 0 var(--Color2),
+        0px 15px 0 var(--Color);
+      --transition-duration: 1s;
+    }
+  
+  }
+
+  // ion-tab-bar ion-tab-button:hover {
+  //   --color: red;
+  // }
+
+  
+  .custom-tab-bar ion-label:hover {
+    box-shadow:
+        0px 1px 0 var(--Color3),
+        0px 2px 0 var(--Color2),
+        0px 3px 0 var(--Color);
+    background-color: white;
+  
+    padding: .5rem;
+    // border-radius: var(--BorderRadius);
+    color: black;
+    transition-duration: .3s;
+  }
+
+
+  ion-button{
+  --color: black;
+  }
+  
+  ion-text {
+  --color: black;
+  }
+
+  ion-content.dropdown-content {
+	--background: wheat;
+  }
+  
+//   ion-item.dropdown-item {
+// 	--background: var(--ion-background-color);
+// 	--color: var(--ion-text-color);
+//   }
+  
+//   ion-button.dropdown-toggle {
+// 	--color: var(--ion-text-color);
+//   }
+  
+//   .menu-icon {
+// 	font-size: 24px;
+//   }
+  
+//   // You can remove this class as it's handled by *ngIf in the component
+//   // .dropdown-menu {
+//   //   display: none;
+//   //   
+//   //   @media (max-width: 768px) {
+//   //     ;
+//   //   }
+//   // }
+  
+//   // Additional styles for better integration
+//   ion-toolbar {
+// 	--background: var(--ion-background-color);
+// 	--color: var(--ion-text-color);
+//   }
+  
+//   ion-title {
+// 	color: var(--ion-text-color);
+//   }
+  
+//   ion-tab-button {
+// 	--color: var(--ion-text-color);
+// 	--color-selected: var(--ion-text-color);
+//   }
+  

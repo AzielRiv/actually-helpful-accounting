@@ -1,0 +1,77 @@
+.PhotoWithWords {
+    // padding: 0.5rem;
+    // box-shadow: 1px 1px 6px #a7a5a5;
+    // height: 100%;
+    // min-height: 225px;
+    // min-width: 250px;
+    // background-size: cover;
+    // background-position: 25% 25%;
+    // margin: 1.5rem;
+
+    padding: 0.5rem;
+    box-shadow: 1px 1px 6px #a7a5a5;
+    min-width: 250px;
+    margin: 1.5rem;
+}
+
+.PhotoWithWords_Inner {
+    // background-color: rgba(0, 0, 0, 0.66);
+    // height: 100%;
+    // display: flex; 
+    // justify-content: center; 
+    // align-items: center; 
+    // text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.66);
+    padding: 2rem;
+}
+
+.PhotoWithWords_Inner:hover {
+    background-color: rgba(0, 0, 0, 0.803);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.PhotoWithWords h4 {
+    color: white;
+    padding: 0px 20px;
+}
+
+.PhotoWithWords h3 {
+    font-family: limelight;
+    color: var(--Color2);
+}
+
+.RichHistoryGraphic {
+    background-image: url('/assets/images/Historic Map of Treno Planning.jpeg');
+    border: solid 2px rgb(241, 223, 160);
+    height: 350px;
+    margin: auto 20px;
+    background-position: left;
+}
+
+.Docs_and_Resources {
+    background-image: url(/assets/images/Board_and_Volunteers.jpeg); 
+    background-size: cover; 
+    background-position: center;
+    box-shadow: inset 0px -3px 4px 0px #ffffff;
+    min-height: 450px;
+}
+
+  .intro-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.intro-section h1 {
+  margin: 0;
+}
+
+.intro-section p {
+  margin: 0;
+  line-height: 1.5;
+}

@@ -1,0 +1,23 @@
+:host{
+  --SafeAreaInsetTop: env(safe-area-inset-top); // for status bar top and bottom
+  --SafeAreaInsetBottom: env(safe-area-inset-bottom); // for status bar top and bottom
+}
+
+
+// OLD IMPLMENTATION KEPT FOR REFERENCE 
+// :host{
+//     --SafeAreaInsetTop: env(safe-area-inset-top); // for status bar top and bottom
+//     --SafeAreaInsetBottom: env(safe-area-inset-bottom); // for status bar top and bottom
+//   }
+  
+//   .ViewArea {
+//     padding-top: max(50px, var(--SafeAreaInsetTop));
+//     padding-bottom: max(50px, var(--SafeAreaInsetBottom));
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     max-height: 100vh;
+//     width: 100vw;
+//     overflow: scroll;
+//   }
+ 

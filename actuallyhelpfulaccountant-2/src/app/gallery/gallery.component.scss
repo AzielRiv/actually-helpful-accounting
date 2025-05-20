@@ -1,0 +1,180 @@
+.main-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+}
+
+.gallery-holder{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+
+.gallery-image {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main-photo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--Color2D);
+    cursor: pointer;
+    background: #ffffffad;
+    padding: 10px;
+    margin: 0;
+    box-shadow: #aeaeaeb0 2px 2px 3px;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.nav-arrow[name="arrow-back-circle"] {
+  left: 10px;
+}
+
+.nav-arrow[name="arrow-forward-circle"] {
+  right: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  border: 2px solid var(--ion-color-primary);
+}
+
+//circle
+/* filepath: /Users/admin/Documents/CodeBases/TRENO/treno/src/app/gallery/gallery.component.scss */
+.circular-gallery-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  & h2{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.center-text {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  max-width: 60%;
+  margin: auto;
+}
+
+.circular-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.circular-gallery div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  transform-origin: center center;
+}
+
+.circular-gallery div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circular-gallery div.large-photo {
+  width: 120px;
+  height: 120px;
+}
+
+.circular-gallery div:nth-child(1) { transform: rotate(0deg) translate(250px) rotate(0deg); }
+.circular-gallery div:nth-child(2) { transform: rotate(30deg) translate(250px) rotate(-30deg); }
+.circular-gallery div:nth-child(3) { transform: rotate(60deg) translate(250px) rotate(-60deg); }
+.circular-gallery div:nth-child(4) { transform: rotate(90deg) translate(250px) rotate(-90deg); }
+.circular-gallery div:nth-child(5) { transform: rotate(120deg) translate(250px) rotate(-120deg); }
+.circular-gallery div:nth-child(6) { transform: rotate(150deg) translate(250px) rotate(-150deg); }
+.circular-gallery div:nth-child(7) { transform: rotate(180deg) translate(250px) rotate(-180deg); }
+.circular-gallery div:nth-child(8) { transform: rotate(210deg) translate(250px) rotate(-210deg); }
+.circular-gallery div:nth-child(9) { transform: rotate(240deg) translate(250px) rotate(-240deg); }
+.circular-gallery div:nth-child(10) { transform: rotate(270deg) translate(250px) rotate(-270deg); }
+.circular-gallery div:nth-child(11) { transform: rotate(300deg) translate(250px) rotate(-300deg); }
+.circular-gallery div:nth-child(12) { transform: rotate(330deg) translate(250px) rotate(-330deg); }

@@ -1,0 +1,7 @@
+<div *ngIf="graphics && graphics.length > 0">
+  <div class="gallery-holder">
+    <div *ngFor="let item of graphics" class="gallery-item">
+      <img [src]="item.image" alt="Gallery Image" loading="lazy" style="width: 100%;" />
+    </div>
+  </div>
+</div>

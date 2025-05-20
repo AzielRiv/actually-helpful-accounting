@@ -1,0 +1,42 @@
+// Custom Top Section 
+.MainTopSection_Outer {
+	padding: 0px;
+	filter: drop-shadow(2px 1px 6px grey);
+	z-index: 100;
+    position: relative;
+}
+
+.MainTopSection {
+		background-size: cover;
+		height: 350px;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+}
+
+h1{
+	padding-top: 60px;
+
+}
+
+.MainTopSection_Lines{
+    height: 100px;
+    margin-top: -100px;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    z-index: -1;
+    position: relative;
+}
+
+.MainTopSection h1 {
+	color: white;
+	font-family: Poller_One;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.MainTopSection h4 {
+	color: white;
+	font-family: ShipporiMinchoB1;
+	font-weight: bold;
+	font-size: 1.5rem;
+	text-align: center;
+}

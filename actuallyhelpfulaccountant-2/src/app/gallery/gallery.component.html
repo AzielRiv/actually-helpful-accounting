@@ -1,0 +1,42 @@
+<div *ngIf="GalleryType === 'carousel'" style="width: 100%;">
+  <div class="main-photo-container">
+    <p class="nav-arrow" style="left: 10px;" (click)="prevPhoto()">
+      < 
+    </p>
+    <img [@fadeAnimation]="animationState" [src]="gallery[currentIndex].image" class="main-photo"
+          [style]="MainPhotoStyle" loading="lazy">
+      <p class="nav-arrow" style="right: 10px;" (click)="nextPhoto()">
+        >
+      </p>
+  </div>
+  <div class="thumbnail-container">
+    <img *ngFor="let item of gallery; let i = index" [src]="item.image" class="thumbnail" (click)="showPhoto(i)" loading="lazy">
+  </div>
+</div>
+<div *ngIf="GalleryType === 'gallery'">
+  <div class="gallery-holder">
+    <div *ngFor="let item of gallery; let i = index" [style]="MainPhotoHolderStyle" (click)="showPopup(item.image)">
+      <img [src]="item.image" [style]="MainPhotoStyle" class="gallery-image" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isPopupVisible" class="popup-overlay" (click)="closePopup()">
+  <div class="popup-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="closePopup()">X</button>
+    <img [src]="popupImage" class="popup-image" loading="lazy">
+  </div>
+</div>
+
+
+<div *ngIf="GalleryType === 'circular'" class="circular-gallery-container">
+  <div class="center-text">
+    <h2 class="h2_cancel">{{CircleTitle}}</h2>
+    <p>{{CircleSubTitle}}</p>
+  </div>
+  <div class="circular-gallery">
+    <div *ngFor="let item of gallery; let i = index" [ngClass]="{'large-photo': (i + 1) % 3 === 0}">
+      <img [src]="item.image" alt="Community Photo" loading="lazy">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <div *ngFor="let content of dDContent; let i = index" class="dropdown-item">
+    <h3>{{ content.title }}</h3>
+    <a style="margin:2rem;" (click)="changeDropdownStatus(i)"> <img style="height: 1rem;"
+        src="assets/icon/downarrow.png"> </a>
+    <div *ngIf="content.active">
+      <h4>{{ content.subtitle }}</h4>
+      <p>{{ content.body }}</p>
+      <hr>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<!-- <div> -->
+  <!-- <ion-tab-bar slot="top" color="primary3" *ngIf="isDesktop">
+      <ion-tab-button *ngFor="let item of navItems" [tab]="item.tab" [href]="item.href">
+        <ion-icon *ngIf="item.icon" aria-hidden="true" [name]="item.icon"></ion-icon>
+        <ion-label color="dark">{{ item.label }}</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar> -->
+
+  <div slot="top" color="primary3" class="custom-tab-bar" *ngIf="isDesktop">
+    <ng-container *ngFor="let item of navItems">
+      <button  *ngIf="item.href !== 'home' && item.href !== '/'" [tab]="item.tab" [href]="item.href" click="play()">
+        <img class="imgLogo" *ngIf="item.href === '/home' || item.href === '/'; else other"
+          src="/assets/icon/aha-logo.png" alt="Home Image">
+        <ng-template #other>
+          <div class="custom-tab-bar">
+            <div *ngIf="item.icon" aria-hidden="true" [name]="item.icon"></div>
+            <div color="dark" style="font-size: 1.2rem; font-weight: bold">{{ item.label }}</div>
+          </div>
+        </ng-template>
+      </button>
+    </ng-container>
+  </div>
+
+
+  <div *ngIf="!isDesktop">
+    <div color="primary3">
+      <div slot="end">
+        <button (click)="toggleDropdown()">
+          <div slot="icon-only" [icon]="appsOutline"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isDesktop && showDropdown" style="position: absolute; top: 70px;">
+    <div>
+      <div *ngFor="let item of navItems" (click)="navigateTo(item.href)">
+        <div *ngIf="item.icon" slot="start" [name]="item.icon"></div>
+        <div class="custom-tab-bar">
+          <div style="font-size: 1.2rem; font-weight: bold">{{ item.label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+<!-- <div style="background-color: #f8f9fa; padding: 10px; text-align: center; margin-top: 60px;">
+  <p>Test Banner</p>
+</div> -->

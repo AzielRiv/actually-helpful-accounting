@@ -1,0 +1,686 @@
+
+:root {
+	// Color Pallet
+	--ColorL: #ACF0E1; // light color
+	--Color: #35AE93; // main color
+	--ColorD: #35AE93; // main color darker
+	--ColorOpposite: black; // opposite color
+
+	--Color2L: #F3F0E9; // secondary color light
+	--Color2: #FFD700; // secondary color
+	--Color2D: #917800; // secondary color darker
+	--Color2Opposite: black; // opposite color
+
+	--Color3L: #FABDAB; // third color light
+	--Color3: #aa6d5b; // third color
+	--Color3D: #5e2f20; // third color darker
+	--Color3Opposite: black; // opposite color
+
+	--Color4L: #F2F2F2; // third color light
+	--Color4: #858489; // third color
+	--Color4Opposite: black; // opposite color
+
+	// Main Fonts
+	--Font: font-family: Adamina !important;
+	--Font2: font-family: Poppins !important;
+	:root {
+  --Font: 'Adamina', serif;
+  --Font2: 'Poppins', sans-serif;
+}
+
+	// Detailing - IN PROGRESS 4/22/25
+	--TransWhite: var(--accentColor); // FLUSH THIS OUT - to be replaced by accentColor
+	--accentColor: #f7f7f78e; // works with entire color pallet (at least majority)
+	--colorBackground:  // background color works with entire color pallet (at least majority)
+
+	--UniversalDropShadow: drop-shadow(2px 2px 2px grey);
+	--UniversalClipPath: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
+	--BorderRadius: 10px;
+	--BRadius: var(--BorderRadius);
+	--boxShadow: 1px 1px 3px #0000004a;
+	--Transition: all 0.3s ease-in-out;
+	--transitionDuration: 2s;
+	
+	// Logo Customization
+	--HeaderLogoWidth: 200px;
+}
+ 
+
+
+
+.h2_cancel::after{
+	background: unset;
+	animation: unset;
+	content: unset;
+	display: unset;
+	width: unset;
+	height: unset;
+
+}
+
+// create animation where the lines slide in from the left 
+@keyframes slideLeft {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+.h2_flip {
+	border: 0px;
+	border-right: solid 2px #000000;
+	padding-right: 0.5rem;
+	background: unset;
+	width: unset;
+}
+
+
+// Content 
+.text {
+	padding: 3rem;
+	display: block;
+}
+
+.Pad_Extra {
+	margin: 8px;
+	padding: 16px;
+
+	& .Pad_Button{
+		text-align: right;
+		margin-right: 3%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    .HideMobile {
+        display: none;
+    }
+}
+
+
+  /* Default styling for desktop */
+  .treno-heading {
+	text-align: right !important;
+  }
+  
+  @media (max-width: 767px) {
+	.treno-heading {
+	  text-align: center !important;
+	}
+  }
+  
+
+.BackgroundCircle {
+	background: radial-gradient(var(--Color2L) 70%, transparent 60%);
+}
+
+.OverLay {
+	background: linear-gradient(45deg, black, transparent);
+	color: white;
+	padding: 4em;
+	height: 100%;
+
+	& h2 {
+		background: unset;
+		width: unset;
+	}
+
+	& h3 {
+		@extend .H_Highlight;
+	}
+
+	& h4 {
+		margin-left: 1em;
+	}
+
+	& .button-dark{
+		background: var(--ColorD);
+		border-radius: 2px;
+	}
+
+	& .button {
+		background: var(--color);
+		text-align: right;
+		border-radius: 2px;
+	}
+}
+
+
+
+.H_Highlight{
+	font-size: 3rem !important;
+    font-weight: 900;
+    background-color: var(--Color);
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.25em;
+    border-left: white 2px solid;
+    margin: 0;
+	line-height: 1;
+}
+
+.B_Highlight{
+	color: black;
+	width: fit-content;
+	padding-left: 3rem;
+	padding-right: 10px;
+	position: relative;
+	// z-index: 3;
+	background-color: unset;
+	margin-left: 1rem;
+	margin-right: 1rem;
+
+	&::before {
+		clip-path: polygon(15% 100%, 50% 100%, 61% 100%, 100% 100%, 100% 32%, 100% 0, 15% 0, 0 100%, 0 0);
+		background: var(--Color3);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&::after{
+		@extend .h2_cancel;
+	}
+}
+
+
+// older code below has to get sweeped through 
+
+
+body,
+p, h3 {
+	font-family: var(--Font2) !important;
+}
+.button2{
+  position: relative;
+  background-color:  var(--Color) !important;
+  color: white;
+  font-size: 1.7rem;
+  padding: 1.2rem;
+  border: none;
+  padding: .5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.button1 {
+  position: relative;
+  background-color:  var(--Color);
+  color: white;
+  font-size: 1.7rem;
+  padding: 1.2rem;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  cursor: pointer;
+  height: 64px;
+  width: 200px;
+
+
+  &:hover {
+   position: relative;
+  background-color: #35AE93;
+  color: white;
+  font-size: 1.7rem;
+  padding: 1.2rem;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  cursor: pointer;
+   transform: skew(1deg, 5deg);
+	  }
+}
+
+.button1::before {
+    content: "";
+    position:absolute;
+    top: -2px;
+    left: -5px;
+    right: -5px;
+    bottom: -2px;
+    border: 2px solid black;
+    z-index: -1;
+    transform: skew(-1deg, -5deg);
+    border-radius: 4px;
+
+
+	&:hover {
+	content: "";
+    position: absolute;
+    top: 2px;
+    left: -5px;
+    right: -5px;
+    bottom: 2px;
+    border: 2px solid black;
+    z-index: -1;
+    transform: skew(deg, deg);
+    border-radius: 4px;
+	transition-duration: 1s; /* Smooth transition */
+	  }
+}
+
+
+
+
+// .button1 {
+//     background-color: #35AE93;
+//     color: white;
+// 	font-size: 1.7rem;
+// 	padding: 1.2rem;
+// 	outline: 4px solid black;
+//     outline-offset: 2px 4px 10px;
+	
+// }
+
+
+button {
+  /* Custom properties */
+  --background: var(--color);
+  --background-hover: var(--colorl);
+  --background-activated: var(--colorl);
+  --background-focused: var(--colorD);
+
+  --border-radius: 1px;
+  --border-color: #000;
+//   --border-style: solid;
+  --border-width: 1px;
+  
+  --ripple-color: deeppink;
+
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+
+}
+
+
+
+.button-Light {
+	background: var(--color);
+	font-size: 1.2rem;
+	font-family: Shippori Mincho B1;
+	font-weight: bold;
+	color: #000;
+	padding: .5rem;
+	border-radius: 0;
+
+
+	 &:hover {
+		/* Hover state */
+
+	  }
+}
+
+
+
+.button-dark {
+	background: #271812;
+	color: white;
+	font-size: 1.2rem;
+	font-family: poppins;
+	font-weight: bold;
+	border-radius: 0;
+	padding: .5rem;
+
+
+	&:hover {
+		/* Hover state */
+		// box-shadow:
+		//   0px 2px 0 var(--Color3),
+		//   0px 4px 0 var(--Color2),
+		//   0px 6px 0 var(--Color);
+		
+		transition-duration: .3s; /* Smooth transition */
+	  }
+}
+
+/// clean below 
+
+.Image {
+	background-size: cover;
+	background-position: center;
+}
+
+// custom content style 
+.CenterContent {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+
+.conentstyleone {
+	margin: 0px;
+}
+
+
+.contentbox {
+	border: solid black 1px;
+	box-shadow: -2px 4px #80808026;
+	margin: 45px 0px;
+	background-color: #fff;
+}
+
+.specsialcontent {
+	min-width: 340px;
+	padding: 2.5rem;
+}
+
+.gridstyle {
+	padding: 0px;
+	height: auto;
+}
+
+.directorscards {
+	box-shadow: 4px 4px 4px #00000036;
+	margin: 2rem 2rem;
+	background-size: cover;
+}
+
+.footerstyle {
+	background-size: cover;
+	padding: 1rem;
+	margin: 0px;
+	height: auto;
+	width: 100%;
+}
+
+.footerText {
+	margin: 16px;
+	padding: 16px;
+}
+
+.contentmargin {
+	height: 2rem;
+}
+
+.membershipcard {
+	box-shadow: 4px 4px 4px #00000036;
+	margin: 2rem 2rem;
+	background-color: var(--Color2D);
+}
+
+.membershipcardinner {
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	background-size: cover;
+}
+
+.photolayouts {
+	max-width: 160px;
+	min-width: 50px;
+}
+
+// Graphic image 
+.container {
+	width: 124px;
+	height: 100px;
+	position: fixed;
+	opacity: 0.6;
+	transform: rotate(45deg);
+}
+
+.container_float {
+	animation: float 180s infinite ease-in-out;
+}
+
+// make an animation so the content gradually moves to the top right, then back to the bottom left with a delay between the movement and very slow motion overall like floating
+@keyframes float {
+	0% {
+		transform: rotate(0deg) translate(-30px, 0);
+	}
+
+	50% {
+		transform: rotate(-40deg) translate(-60px, 0px);
+	}
+
+	100% {
+		transform: rotate(0deg) translate(-30px, 0);
+	}
+}
+
+.ContAnimation {
+	animation: float 10s ease-in-out infinite;
+}
+
+
+.underline{
+	box-shadow: 0px 2px 0px #000000;
+}
+
+// Animations
+
+@keyframes slide-in {
+	from {
+		margin-left: 150px;
+		filter: blur(0);
+	}
+
+	80% {
+		filter: blur(5px);
+	}
+
+	90% {
+		filter: blur(5px);
+	}
+
+	to {
+		margin-left: 0px;
+		filter: blur(0);
+	}
+}
+
+
+// Old Style Sheet BELOW - cleaning 
+
+/* Core CSS required for Ionic components to work properly */
+// @import "@ionic/angular/css/core.css";
+
+// /* Basic CSS for apps built with Ionic */
+// @import "@ionic/angular/css/normalize.css";
+// @import "@ionic/angular/css/structure.css";
+// @import "@ionic/angular/css/typography.css";
+// @import "@ionic/angular/css/display.css";
+
+// /* Optional CSS utils that can be commented out */
+// @import "@ionic/angular/css/padding.css";
+// @import "@ionic/angular/css/float-elements.css";
+// @import "@ionic/angular/css/text-alignment.css";
+// @import "@ionic/angular/css/text-transformation.css";
+// @import "@ionic/angular/css/flex-utils.css";
+
+
+// OVVERIDE DARK AND LIGHT COLORS 
+:root {
+	--background-color: var(--Color4L);
+	--background-color-rgb: 246, 248, 252;
+
+	// --color: #000000;
+	// --color-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+		--background-color: var(--Color4L);
+		--background-color-rgb: 246, 248, 252;
+
+		--color: #000000;
+		--color-rgb: 0, 0, 0;
+
+		background-color: var(--ion-background-color);
+		color: var(--ion-text-color);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		--background-color: var(--Color4D);
+		--background-color-rgb: 246, 248, 252;
+
+		--color: #000000;
+		--color-rgb: 0, 0, 0;
+
+		background-color: var(--background-color);
+		color: var(--color);
+	}
+}
+
+
+body {
+	background-color: var(--background-color);
+	color: var(--color);
+}
+
+
+
+/////////////////////////////// Custom Changes - from Nick
+
+.ion-page {
+	left: unset;
+	right: unset;
+	top: unset;
+	bottom: unset;
+	display: unset;
+	position: unset;
+	flex-direction: unset;
+	justify-content: unset;
+	contain: unset;
+	z-index: unset;
+}
+
+
+
+//////////////////////////////////// Custom Top Section 
+.MainTopSection_Outer {
+    padding: 0px;
+    filter: drop-shadow(2px 1px 6px grey);
+    z-index: 100;
+    position: relative;
+	background-image: url('/assets/images/architecture_gal/architecture_modern_02.jpeg'); // fallback default image 
+	background-size: cover; // fallback 
+	background-position: center; // fallback
+}
+
+.MainTopSection {
+    position: relative;
+    //background-color: var(--Color);
+    background-size: cover;
+    background-position: 50% 40%;
+    overflow: hidden;
+    height: 300px;
+    animation: changeBackground 15s 0s infinite;
+
+    & h1 {
+        color: white;
+        font-family: var(--Font);
+        font-size: 8rem;
+        text-align: center;
+    }
+
+    & .fadeSTART {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        animation: fadeOut 2s ease-in-out 0s forwards;
+        z-index: 1;
+    }
+
+    & .MainTopSection_Inner {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 4em;
+        //background: linear-gradient(60deg, rgb(0, 0, 0) 0%, rgb(0 0 0 / 22%) 100%); // fade END color
+		background: radial-gradient(transparent,black);
+
+        .MainTopSection_Inner_Title {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+			height: 50%;
+            @media screen and (max-width: 768px) {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.MainTopSection_Lines {
+    height: 100px;
+    margin-top: -100px;
+    clip-path: polygon(0 100%, 100% 70%, 100% 100%, 0% 100%);
+    z-index: 2;
+    position: relative;
+    opacity: 0.8;
+    background-color: var(--Color3);
+
+}
+
+/* Default styling for desktop */
+.responsive-photo {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
+    max-height: 200px;
+    /* Larger size for desktop */
+    margin: 0.2rem;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .responsive-photo {
+        max-height: 90px;
+        /* Smaller size for mobile */
+        margin: 0.5rem;
+        /* Adjust margins if needed */
+        width: auto;
+        /* Ensure the width adjusts dynamically */
+        height: auto;
+        /* Maintain aspect ratio */
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+        /* Optional adjustment for mobile */
+    }
+}
+
+.pagepadding {
+margin: auto;
+
+}
+
+p {
+	font-family: Poppins !important;
+	font-size: 1.2rem !important;
+}
+h1, h2 {
+font-family: var(--Font) !important;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 2rem !important;
+	font-family: Poppins !important;
+}
+
+// div {
+// 	unicode-bidi: normal !important;
+	
+// }
