@@ -2,18 +2,29 @@ import { Component } from '@angular/core';
 import { appRouteKey } from '../app.ENV'; 
 import { Router } from '@angular/router';
 import { sRouteKey, lRouteKey } from 'my-library';
+import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-about',
   templateUrl: 'about.page.html',
   styleUrls: ['about.page.scss'],
-  standalone: false
+  standalone: false,
+  template: `
+    <ng-lottie [options]="options" (animationCreated)="onAnimate($event)"></ng-lottie>
+  `,
 })
 
 
 export class AboutPage {
   constructor(private router: Router){}
   
+   options: AnimationOptions = {
+    path: '/assets/graphics/concept-of-data-analysis-and-maintenance-2040897_Reveal.json',
+  };
+
+  onAnimate(animationItem: any): void {
+    console.log(animationItem);
+  }
 
   navigateTo(Link: string){
     window.open(Link);

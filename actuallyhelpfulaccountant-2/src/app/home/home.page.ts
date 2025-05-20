@@ -29,6 +29,7 @@ export class HomePage {
     problemsolve: { image: string }[];
     newmessage: { image: string }[];
     assistant: { image: string }[];
+    dataconcepts: { image: string }[];
   } = {
 
     
@@ -70,7 +71,10 @@ export class HomePage {
       ],
           problemsolve: [
         { image: 'assets/graphics/solvedtheproblem.png' }
-      ]
+      ],
+          dataconcepts: [
+        { image: 'assets/graphics/ concept-of-data-analysis-and-maintenance-2040897_Reveal.json' }
+      ],
     };
 
 

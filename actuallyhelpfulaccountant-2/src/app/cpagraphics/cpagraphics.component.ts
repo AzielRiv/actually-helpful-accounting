@@ -21,6 +21,7 @@ export interface graphics {
   problemsolve: GraphicItem[];
   assistant: GraphicItem[];
   newmessage: GraphicItem[];
+  dataconcepts: GraphicItem[];
 }
 
 
