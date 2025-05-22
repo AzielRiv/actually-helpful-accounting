@@ -111,14 +111,19 @@ export class AboutPage {
   ];
 
 
-  routeToHistory(){
-    this.router.navigate([appRouteKey.faqs.path]);
-  }
-  routeToContact(){
+ routeToContactUs() {
     this.router.navigate([appRouteKey.contact.path]);
   }
-    routeToLogin() {
-      this.router.navigate([lRouteKey.createAccount.path]);  
-    }
-
+  routeToFAQs() {
+    this.router.navigate([appRouteKey.faqs.path]);
+  }
+  routeToAbout() {
+    this.router.navigate([appRouteKey.about.path]);
+  }
+    routeToServices() {
+    this.router.navigate([appRouteKey.services.path]);
+  }
+  routeToLogin() {
+    this.router.navigate([lRouteKey.login.path]);
+  }
 }

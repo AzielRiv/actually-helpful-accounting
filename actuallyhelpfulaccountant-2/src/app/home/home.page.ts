@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CpagraphicsComponent } from '../cpagraphics/cpagraphics.component';
+import { sRouteKey, lRouteKey } from 'my-library';
+import { Router } from '@angular/router';
+import { appRouteKey } from '../app.ENV';
 
 import { IonContent, IonRow, IonCol, IonGrid, IonText, IonButton } from "@ionic/angular/standalone";
 
@@ -10,10 +13,13 @@ import { IonContent, IonRow, IonCol, IonGrid, IonText, IonButton } from "@ionic/
   standalone: false,
 })
 export class HomePage {
+  
 
   navigateTo(Link: string){
     window.open(Link);
   }
+
+  constructor(private router: Router){}
 
   graphics: {
     herographic: { image: string }[];
@@ -98,4 +104,20 @@ export class HomePage {
       subtitle: 'Become a member of the TRENO Board of Directors.'
     },
   ];
+
+ routeToContactUs() {
+    this.router.navigate([appRouteKey.contact.path]);
+  }
+  routeToFAQs() {
+    this.router.navigate([appRouteKey.faqs.path]);
+  }
+  routeToAbout() {
+    this.router.navigate([appRouteKey.about.path]);
+  }
+    routeToServices() {
+    this.router.navigate([appRouteKey.services.path]);
+  }
+  routeToLogin() {
+    this.router.navigate([lRouteKey.login.path]);
+  }
 }
